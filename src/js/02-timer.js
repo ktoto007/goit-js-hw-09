@@ -46,7 +46,7 @@ const timerValues = document.querySelectorAll('.value');
 flatpickr(datetimePicker, options);
 
 function timerLogic() {
-  if (waitingTime < 999) {
+  if (waitingTime < 0) {
     return;
   }
 
@@ -62,7 +62,12 @@ function timerLogic() {
 function timerStart() {
   datetimePicker.disabled = true;
   startButton.disabled = true;
-  setInterval(timerLogic, 1000);
+  const timerId = setInterval(timerLogic, 1000);
+
+  setTimeout(() => {
+    clearInterval(timerId);
+    datetimePicker.disabled = false;
+  }, waitingTime + 1000);
 }
 
 function addLeadingZero(value) {
