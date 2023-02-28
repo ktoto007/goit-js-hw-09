@@ -29,3 +29,33 @@ img {
   border-radius: 5px;
   color: #212121;
 }
+/**/
+
+.thingthForTimer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.thingthForTimer .button {
+  width: 50px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: #212121;
+}
+
+#datetime-picker {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: #212121;
+}
+
+.timer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+  color: #212121;
+}
