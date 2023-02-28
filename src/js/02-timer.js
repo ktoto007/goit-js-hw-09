@@ -54,7 +54,7 @@ function timerLogic() {
 
   waitingTime -= 1000;
 
-  for (i = 0; i < timerValues.length; i += 1) {
+  for (let i = 0; i < timerValues.length; i += 1) {
     timerValues[i].textContent = addLeadingZero(newTimerValues[i]);
   }
 }
