@@ -27,9 +27,7 @@ function promisesResultsOutput(e) {
   const step = Number(inputStep.value);
   const amount = Number(inputAmount.value);
   submitButton.disabled = true;
-  for (i = 1; i <= amount; i += 1) {
-    let fullDelay = 0;
-
+  for (let i = 1; i <= amount; i += 1) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
@@ -39,7 +37,6 @@ function promisesResultsOutput(e) {
       });
     delay += step;
 
-    fullDelay += delay;
     if (i === amount) {
       setTimeout(() => {
         submitButton.disabled = false;
